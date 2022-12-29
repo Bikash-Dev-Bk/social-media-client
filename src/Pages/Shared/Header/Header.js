@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider';
 
 const Header = () => {
 
-    // const {user , logOut} = useContext(AuthContext);
+    const {user , logOut} = useContext(AuthContext);
   
-    // const handleLogOut = () => {
-    //   logOut()
-    //     .then(() => {})
-    //     .catch((error) => console.error(error));
-    // };
+    const handleLogOut = () => {
+      logOut()
+        .then(() => {})
+        .catch((error) => console.error(error));
+    };
   
-      const menuItems = <>
+      const menuItems = 
+      <>
           <li className="font-semibold"><Link to='/'>Home</Link></li>
           <li className="font-semibold"><Link to='/media'>Media</Link></li>
           <li className="font-semibold"><Link to='/message'>Message</Link></li>
           <li className="font-semibold"><Link to='/about'>About</Link></li>
   
-          {/* {
+          {
             user?.email ?
             <>
             <li className="font-semibold" onClick={handleLogOut} ><Link to='/login'>Log Out</Link></li>
@@ -27,7 +29,7 @@ const Header = () => {
             <li className="font-semibold"><Link to='/login'>Login</Link></li>
             <li className="font-semibold"><Link to='/register'>Register</Link></li>
             </>
-          } */}
+          }
       </>
   
     return (
@@ -59,7 +61,7 @@ const Header = () => {
           </div>
   
           <div className="header-image flex justify-items-center py-4 ">
-            <Link className="btn btn-ghost normal-case text-3xl">Instatown</Link>
+            <Link className="btn btn-ghost normal-case text-3xl font-bold">Instatown</Link>
           </div>
         </div>
         <div className="navbar-end hidden lg:flex">
