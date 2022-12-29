@@ -33,7 +33,7 @@ const Header = () => {
       </>
   
     return (
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-slate-300 rounded">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -61,7 +61,7 @@ const Header = () => {
           </div>
   
           <div className="header-image flex justify-items-center py-4 ">
-            <Link className="btn btn-ghost normal-case text-3xl font-bold">Instatown</Link>
+            <Link className="btn btn-ghost normal-case text-3xl font-3xl">Instatown</Link>
           </div>
         </div>
         <div className="navbar-end hidden lg:flex">

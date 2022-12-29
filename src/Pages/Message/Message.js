@@ -1,11 +1,17 @@
-import React from 'react';
+import React from "react";
 
 const Message = () => {
-    return (
-        <div>
-            <h2 className='bg-blue-500 my-6 p-10 text-center text-white text-3xl font-bold'>Coming Soon...</h2>
+  return (
+    <div>
+      <div className="hero h-screen my-10 bg-base-200">
+        <div className="hero-content text-center">
+          <div className="max-w-md">
+            <h1 className="text-5xl font-bold">Coming Soon...</h1>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Message;
