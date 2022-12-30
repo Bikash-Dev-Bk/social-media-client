@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const About = () => {
   const [about, setAbout] = useState([]);
-  console.log("inside about", about);
+
   useEffect(() => {
     fetch("http://localhost:5000/about")
       .then((res) => res.json())
@@ -23,14 +23,14 @@ const About = () => {
   return (
     <div className="bg-base-200 my-10">
       <div>
-      <h1 className="text-5xl font-semibold py-6 text-center">About Me</h1>
-      <div className="card-actions justify-end pr-10">
-              <label htmlFor="booking-modal" className="btn btn-primary">
-              Edit
-              </label>
-            </div>
+        <h1 className="text-5xl font-semibold py-6 text-center">About Me</h1>
+        <div className="card-actions justify-end pr-10">
+          <label htmlFor="booking-modal" className="btn btn-primary">
+            Edit
+          </label>
+        </div>
       </div>
-      
+
       {about.map((abt) => (
         <div key={abt._id} abt={abt} className="flex justify-center">
           <div>
@@ -59,10 +59,7 @@ const About = () => {
                 >
                   ✕
                 </label>
-                <form
-                    onSubmit={handleAbout}
-                  className="grid grid-cols-1 gap-0"
-                >
+                <form onSubmit={handleAbout} className="grid grid-cols-1 gap-0">
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">Name</span>
