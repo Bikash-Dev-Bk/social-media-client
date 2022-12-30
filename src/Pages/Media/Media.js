@@ -4,7 +4,7 @@ const Media = () => {
   const [displayPosts, setDisplayPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/posts")
+    fetch("https://social-media-server-rouge-theta.vercel.app/posts")
       .then((res) => res.json())
       .then((data) => setDisplayPosts(data));
   }, []);

@@ -4,7 +4,7 @@ const About = () => {
   const [about, setAbout] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/about")
+    fetch("https://social-media-server-rouge-theta.vercel.app/about")
       .then((res) => res.json())
       .then((data) => setAbout(data));
   }, []);
